@@ -1,0 +1,417 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4fff7;
+    color:#1f3d2b;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    background:#1b4332;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+}
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#95d5b2;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section{
+    display:none;
+    min-height:90vh;
+}
+
+.section.active{
+    display:block;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    min-height:90vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    background:linear-gradient(
+        135deg,
+        #1b4332,
+        #2d6a4f,
+        #52b788,
+        #d8f3dc
+    );
+
+    color:white;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:1.1rem;
+    margin-bottom:30px;
+}
+
+.hero button{
+    background:white;
+    color:#1b4332;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:0.3s;
+}
+
+.hero button:hover{
+    transform:translateY(-4px);
+    background:#d8f3dc;
+}
+
+/* =========================
+   REGISTER FORM
+========================= */
+
+.form-container{
+
+    max-width:700px;
+
+    margin:60px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.form-container h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:#1b4332;
+}
+
+.input-group{
+    margin-bottom:20px;
+}
+
+.input-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.input-group input,
+.input-group textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    border:2px solid #d8f3dc;
+
+    border-radius:10px;
+
+    outline:none;
+
+    transition:0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus{
+
+    border-color:#52b788;
+}
+
+.input-group small{
+    display:block;
+    margin-top:6px;
+    font-size:0.85rem;
+}
+
+.submit-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    background:#2d6a4f;
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+
+    background:#40916c;
+
+    transform:translateY(-2px);
+}
+
+/* =========================
+   STUDENT CARDS
+========================= */
+
+.students-container{
+
+    padding:60px 8%;
+}
+
+.students-container h2{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+    color:#1b4332;
+}
+
+#studentCards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+}
+
+.student-card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    border-left:6px solid #52b788;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+
+    transition:0.3s;
+}
+
+.student-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.student-card h3{
+
+    margin-bottom:10px;
+
+    color:#1b4332;
+}
+
+.student-card p{
+
+    margin-bottom:8px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-container{
+
+    max-width:800px;
+
+    margin:100px auto;
+
+    text-align:center;
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.contact-container h2{
+
+    margin-bottom:25px;
+
+    color:#1b4332;
+}
+
+.contact-container p{
+
+    margin-bottom:15px;
+
+    font-size:1.05rem;
+}
+
+/* =========================
+   PASSWORD STATUS COLORS
+========================= */
+
+.weak{
+    color:red;
+    font-weight:600;
+}
+
+.medium{
+    color:orange;
+    font-weight:600;
+}
+
+.strong{
+    color:green;
+    font-weight:600;
+}
+
+.match{
+    color:green;
+    font-weight:600;
+}
+
+.not-match{
+    color:red;
+    font-weight:600;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.hero,
+.form-container,
+.students-container,
+.contact-container{
+
+    animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:15px;
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .form-container{
+
+        margin:30px 15px;
+
+        padding:25px;
+    }
+
+    .contact-container{
+
+        margin:50px 15px;
+
+        padding:30px;
+    }
+}

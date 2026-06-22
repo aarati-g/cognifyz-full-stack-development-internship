@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Student Dashboard
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#" onclick="showSection('home')">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="showSection('register')">
+                    Register
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="showSection('students')">
+                    Students
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="showSection('contact')">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- HOME SECTION -->
+
+    <section id="home" class="section active">
+
+        <div class="hero">
+
+            <h1>
+                Welcome to Student Registration Dashboard
+            </h1>
+
+            <p>
+                Manage registrations, validate student details,
+                and view records dynamically.
+            </p>
+
+            <button onclick="showSection('register')">
+                Register Now
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- REGISTER SECTION -->
+
+    <section id="register" class="section">
+
+        <div class="form-container">
+
+            <h2>
+                Student Registration Form
+            </h2>
+
+            <form id="studentForm">
+
+                <div class="input-group">
+
+                    <label>
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter Full Name"
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter Email"
+                    >
+
+                    <small id="emailMessage"></small>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create Password"
+                    >
+
+                    <small id="strengthText">
+                        Password Strength
+                    </small>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Confirm Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm Password"
+                    >
+
+                    <small id="matchText"></small>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        About Yourself
+                    </label>
+
+                    <textarea
+                        id="about"
+                        rows="4"
+                        placeholder="Write something..."
+                    ></textarea>
+
+                    <small>
+                        Characters:
+                        <span id="charCount">0</span>
+                    </small>
+
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Register Student
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <!-- STUDENTS SECTION -->
+
+    <section id="students" class="section">
+
+        <div class="students-container">
+
+            <h2>
+                Registered Students
+            </h2>
+
+            <div id="studentCards">
+
+                <!-- Dynamic Cards Here -->
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+    <section id="contact" class="section">
+
+        <div class="contact-container">
+
+            <h2>
+                Contact Us
+            </h2>
+
+            <p>
+                Email: support@studentportal.com
+            </p>
+
+            <p>
+                Phone: +91 9876543210
+            </p>
+
+            <p>
+                Location: Pune, Maharashtra
+            </p>
+
+        </div>
+
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

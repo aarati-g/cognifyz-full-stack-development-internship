@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Command Center</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- TOP NAVBAR -->
+
+    <header class="top-navbar">
+
+        <div class="logo-section">
+
+            <i class="fa-solid fa-rocket"></i>
+
+            <h2>
+                Career Command Center
+            </h2>
+
+        </div>
+
+        <div class="nav-actions">
+
+            <button
+                id="addInternshipBtn"
+                class="primary-btn"
+            >
+                <i class="fa-solid fa-plus"></i>
+                Add Internship
+            </button>
+
+            <button
+                id="logoutBtn"
+                class="logout-btn"
+            >
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- STATS -->
+
+    <section class="stats-container">
+
+        <div class="stat-card total">
+
+            <h3 id="totalCount">
+                0
+            </h3>
+
+            <p>
+                Total Applications
+            </p>
+
+        </div>
+
+        <div class="stat-card applied">
+
+            <h3 id="appliedCount">
+                0
+            </h3>
+
+            <p>
+                Applied
+            </p>
+
+        </div>
+
+        <div class="stat-card assessment">
+
+            <h3 id="assessmentCount">
+                0
+            </h3>
+
+            <p>
+                Assessment
+            </p>
+
+        </div>
+
+        <div class="stat-card interview">
+
+            <h3 id="interviewCount">
+                0
+            </h3>
+
+            <p>
+                Interview
+            </p>
+
+        </div>
+
+        <div class="stat-card selected">
+
+            <h3 id="selectedCount">
+                0
+            </h3>
+
+            <p>
+                Selected
+            </p>
+
+        </div>
+
+        <div class="stat-card rejected">
+
+            <h3 id="rejectedCount">
+                0
+            </h3>
+
+            <p>
+                Rejected
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- INSIGHTS SECTION -->
+
+<section class="insights-section">
+
+    <div class="career-tip-card">
+
+        <h3>
+            🎯 Career Tips
+        </h3>
+
+        <ul>
+
+            <li>
+                Apply to at least 5 internships weekly
+            </li>
+
+            <li>
+                Keep your resume updated
+            </li>
+
+            <li>
+                Practice aptitude regularly
+            </li>
+
+            <li>
+                Track every application
+            </li>
+
+        </ul>
+
+    </div>
+
+    <div class="career-goal-card">
+
+        <h3>
+            🚀 Career Goal
+        </h3>
+
+        <div class="goal-circle">
+
+            <span>
+                15
+            </span>
+
+        </div>
+
+        <p>
+            Target Applications
+        </p>
+
+    </div>
+
+    <div class="activity-card">
+
+        <h3>
+            📈 Quick Start
+        </h3>
+
+        <div class="activity-list">
+
+            <p>
+                ➜ Add your first internship
+            </p>
+
+            <p>
+                ➜ Move applications through stages
+            </p>
+
+            <p>
+                ➜ Track interviews and offers
+            </p>
+
+            <p>
+                ➜ Build your career pipeline
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- KANBAN BOARD -->
+
+    <section class="kanban-board">
+
+        <!-- APPLIED -->
+
+        <div class="column">
+
+            <div class="column-header applied-header">
+
+                Applied
+
+            </div>
+
+            <div
+                id="appliedColumn"
+                class="column-body"
+            >
+
+            </div>
+
+        </div>
+
+        <!-- ASSESSMENT -->
+
+        <div class="column">
+
+            <div class="column-header assessment-header">
+
+                Assessment
+
+            </div>
+
+            <div
+                id="assessmentColumn"
+                class="column-body"
+            >
+
+            </div>
+
+        </div>
+
+        <!-- INTERVIEW -->
+
+        <div class="column">
+
+            <div class="column-header interview-header">
+
+                Interview
+
+            </div>
+
+            <div
+                id="interviewColumn"
+                class="column-body"
+            >
+
+            </div>
+
+        </div>
+
+        <!-- SELECTED -->
+
+        <div class="column">
+
+            <div class="column-header selected-header">
+
+                Selected
+
+            </div>
+
+            <div
+                id="selectedColumn"
+                class="column-body"
+            >
+
+            </div>
+
+        </div>
+
+        <!-- REJECTED -->
+
+        <div class="column">
+
+            <div class="column-header rejected-header">
+
+                Rejected
+
+            </div>
+
+            <div
+                id="rejectedColumn"
+                class="column-body"
+            >
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ADD INTERNSHIP MODAL -->
+
+    <div
+        id="internshipModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <h2>
+                Add Internship
+            </h2>
+
+            <form id="internshipForm">
+
+                <input
+                    type="text"
+                    id="company"
+                    placeholder="Company Name"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="role"
+                    placeholder="Role"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="location"
+                    placeholder="Location"
+                    required
+                >
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    Save Internship
+                </button>
+
+            </form>
+
+            <button
+                id="closeModal"
+                class="close-btn"
+            >
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

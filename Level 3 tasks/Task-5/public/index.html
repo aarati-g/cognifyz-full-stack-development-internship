@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        University Admission Portal
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-graduation-cap"></i>
+
+            <h2>
+                UniPortal
+            </h2>
+
+        </div>
+
+        <ul>
+
+            <li
+                class="active"
+                onclick="showSection('dashboard')"
+            >
+                <i class="fa-solid fa-chart-line"></i>
+
+                Dashboard
+            </li>
+
+            <li
+                onclick="showSection('newApplication')"
+            >
+                <i class="fa-solid fa-file-circle-plus"></i>
+
+                New Application
+            </li>
+
+            <li
+                onclick="showSection('applications')"
+            >
+                <i class="fa-solid fa-users"></i>
+
+                Applications
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <h1>
+                University Admission Management Portal
+            </h1>
+
+        </header>
+
+        <!-- DASHBOARD -->
+
+        <section
+            id="dashboard"
+            class="content-section active-section"
+        >
+
+            <h2>
+                Dashboard Overview
+            </h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    <h3 id="totalApplications">
+                        0
+                    </h3>
+
+                    <p>
+                        Total Applications
+                    </p>
+
+                </div>
+
+                <div class="stat-card approved">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <h3 id="approvedApplications">
+                        0
+                    </h3>
+
+                    <p>
+                        Approved
+                    </p>
+
+                </div>
+
+                <div class="stat-card pending">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <h3 id="pendingApplications">
+                        0
+                    </h3>
+
+                    <p>
+                        Pending
+                    </p>
+
+                </div>
+
+                <div class="stat-card rejected">
+
+                    <i class="fa-solid fa-circle-xmark"></i>
+
+                    <h3 id="rejectedApplications">
+                        0
+                    </h3>
+
+                    <p>
+                        Rejected
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- NEW APPLICATION -->
+
+        <section
+            id="newApplication"
+            class="content-section"
+        >
+
+            <div class="form-card">
+
+                <h2>
+                    New Admission Application
+                </h2>
+
+                <form id="applicationForm">
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Student Name"
+                        required
+                    >
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Student Email"
+                        required
+                    >
+
+                    <select id="course">
+
+                        <option value="">
+                            Select Course
+                        </option>
+
+                        <option>
+                            BCA
+                        </option>
+
+                        <option>
+                            BBA
+                        </option>
+
+                        <option>
+                            MCA
+                        </option>
+
+                        <option>
+                            MBA
+                        </option>
+
+                    </select>
+
+                    <select id="year">
+
+                        <option value="">
+                            Select Year
+                        </option>
+
+                        <option>
+                            First Year
+                        </option>
+
+                        <option>
+                            Second Year
+                        </option>
+
+                        <option>
+                            Third Year
+                        </option>
+
+                    </select>
+
+                    <button type="submit">
+
+                        Submit Application
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- APPLICATIONS -->
+
+        <section
+            id="applications"
+            class="content-section"
+        >
+
+            <div class="applications-header">
+
+                <h2>
+                    Applications
+                </h2>
+
+            </div>
+
+            <div
+                id="applicationList"
+                class="application-grid"
+            >
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- EDIT MODAL -->
+
+    <div
+        id="editModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <h2>
+                Edit Application
+            </h2>
+
+            <input
+                type="text"
+                id="editName"
+            >
+
+            <input
+                type="email"
+                id="editEmail"
+            >
+
+            <select id="editCourse">
+
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>MCA</option>
+                <option>MBA</option>
+
+            </select>
+
+            <select id="editYear">
+
+                <option>
+                    First Year
+                </option>
+
+                <option>
+                    Second Year
+                </option>
+
+                <option>
+                    Third Year
+                </option>
+
+            </select>
+
+            <div class="modal-buttons">
+
+                <button id="updateBtn">
+
+                    Update
+
+                </button>
+
+                <button
+                    id="closeBtn"
+                    class="cancel-btn"
+                >
+
+                    Cancel
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
