@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Developer Command Center
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-brands fa-github"></i>
+
+            <h2>
+                Developer Command Center
+            </h2>
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Dashboard
+            </a>
+
+            <a href="oauth.html">
+                OAuth Learning Center
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <h1>
+            Explore GitHub Developers
+        </h1>
+
+        <p>
+            Search GitHub profiles, analyze repositories,
+            discover developers, and learn modern API concepts.
+        </p>
+
+    </section>
+
+    <!-- SEARCH SECTION -->
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="username"
+                placeholder="Enter GitHub Username"
+            >
+
+            <button
+                id="searchBtn"
+            >
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- PROFILE CARD -->
+
+    <section
+        id="profileContainer"
+        class="profile-container"
+    >
+
+    </section>
+
+    <!-- REPOSITORIES -->
+
+    <section class="repo-section">
+
+        <div class="section-title">
+
+            <h2>
+                Repository Showcase
+            </h2>
+
+        </div>
+
+        <div
+            id="repoContainer"
+            class="repo-grid"
+        >
+
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="features-section">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h3>
+                GitHub API
+            </h3>
+
+            <p>
+                Real-time developer data
+                fetched from GitHub.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h3>
+                Rate Limiting
+            </h3>
+
+            <p>
+                Prevent API abuse using
+                Express Rate Limiter.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-bug"></i>
+
+            <h3>
+                Error Handling
+            </h3>
+
+            <p>
+                Handles invalid usernames
+                and API failures gracefully.
+            </p>
+
+        </div>
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-key"></i>
+
+            <h3>
+                OAuth Concepts
+            </h3>
+
+            <p>
+                Learn modern authentication
+                mechanisms used by APIs.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Developer Command Center • Cognifyz Task 7
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
