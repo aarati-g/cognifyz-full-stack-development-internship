@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Neural News Engine
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ==========================
+         SIDEBAR
+    =========================== -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h2>
+                Neural News
+            </h2>
+
+        </div>
+
+<ul>
+
+    <li
+        class="nav-item active"
+        data-target="dashboard"
+    >
+
+        <i class="fa-solid fa-house"></i>
+
+        Dashboard
+
+    </li>
+
+    <li
+        class="nav-item"
+        data-target="newsSection"
+    >
+
+        <i class="fa-solid fa-newspaper"></i>
+
+        AI News
+
+    </li>
+
+    <li
+        class="nav-item"
+        data-target="serverSection"
+    >
+
+        <i class="fa-solid fa-server"></i>
+
+        Server Health
+
+    </li>
+
+    <li
+        class="nav-item"
+        data-target="cacheSection"
+    >
+
+        <i class="fa-solid fa-database"></i>
+
+        Cache Monitor
+
+    </li>
+
+</ul>
+
+
+
+    </aside>
+
+    <!-- ==========================
+         MAIN CONTENT
+    =========================== -->
+
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>
+
+                    Neural News Engine
+
+                </h1>
+
+                <p>
+
+                    AI News Intelligence Dashboard
+
+                </p>
+
+            </div>
+
+            <button id="refreshBtn">
+
+                <i class="fa-solid fa-rotate-right"></i>
+
+                Refresh
+
+            </button>
+
+        </header>
+
+        <!-- STATS -->
+
+        <section
+    id="dashboard"
+    class="stats-grid"
+>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-newspaper"></i>
+
+                <h2 id="totalArticles">
+
+                    0
+
+                </h2>
+
+                <p>
+
+                    Articles
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <h2 id="cacheHits">
+
+                    0
+
+                </h2>
+
+                <p>
+
+                    Cache Hits
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-clock"></i>
+
+                <h2 id="lastUpdated">
+
+                    --
+
+                </h2>
+
+                <p>
+
+                    Last Updated
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-heart-pulse"></i>
+
+                <h2 id="serverStatus">
+
+                    Healthy
+
+                </h2>
+
+                <p>
+
+                    Server
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- NEWS -->
+
+        <section
+    id="newsSection"
+>
+
+            <div class="section-header">
+
+                <h2>
+
+                    Latest AI News
+
+                </h2>
+
+            </div>
+
+            <div
+                id="newsContainer"
+                class="news-grid"
+            >
+
+            </div>
+
+        </section>
+
+        <!-- SERVER STATUS -->
+
+        <section
+        id="serverSection"
+        class="status-grid"
+>
+
+            <div
+                id="cacheSection"
+                class="status-card"
+>
+
+                <h3>
+
+                    Server Health
+
+                </h3>
+
+                <p>
+
+                    <strong>Status :</strong>
+
+                    <span id="healthStatus">
+
+                        Healthy
+
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Uptime :</strong>
+
+                    <span id="uptime">
+
+                        --
+
+                    </span>
+
+                </p>
+
+            </div>
+
+            <div
+    id="cacheSection"
+    class="status-card"
+>
+
+                <h3>
+
+                    Cache Information
+
+                </h3>
+
+                <p>
+
+                    <strong>Hits :</strong>
+
+                    <span id="hits">
+
+                        0
+
+                    </span>
+
+                </p>
+
+                <p>
+
+                    <strong>Misses :</strong>
+
+                    <span id="misses">
+
+                        0
+
+                    </span>
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            Neural News Engine 
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
