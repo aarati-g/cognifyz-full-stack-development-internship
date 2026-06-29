@@ -22,10 +22,12 @@ This repository showcases the tasks and projects completed during my Full Stack 
 * Task 5: API Integration and Front-End Interaction
 * Task 6: Database Integration and User Authentication
 
-### Level 4 – Ongoing
+### Level 4 – Advanced Server-Side Development
 
-* Task 7: In Progress
-* Task 8: Upcoming
+* Task 7: Advanced API Usage and External API Integration
+
+* Task 8: Advanced Server-Side Functionality Where Data Meets Intelligence
+
 
 
 ## Skills Developed
